@@ -26,7 +26,7 @@ To run this project locally, ensure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your/repository.git
+   git clone https://github.com/usmanzaheer1995/robot_cleaning_service.git
    cd repository-name
    
 2. Install dependencies using pip:
