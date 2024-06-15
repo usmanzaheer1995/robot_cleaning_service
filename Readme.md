@@ -16,10 +16,10 @@ The Robot Cleaning Service is a Flask-based microservice designed to simulate a 
 
 To run this project locally, ensure you have the following installed:
 
+- Docker (for containerization)
 - Python (3.10 recommended)
 - pip package manager
 - PostgreSQL database (you can use Docker to run it locally)
-- Docker (optional, for containerization)
 
 ## Installation
 
