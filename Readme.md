@@ -1,8 +1,8 @@
-# Tibber Robot Cleaning Service
+# Robot Cleaning Service
 
 ## Overview
 
-The Tibber Robot Cleaning Service is a Flask-based microservice designed to simulate a robot moving in an office space and cleaning designated places. The service accepts commands via HTTP requests to specify the starting coordinates and movement directions of the robot on a grid-like office environment. After completing its cleaning path, the service stores execution details in a PostgreSQL database and returns the results in JSON format.
+The Robot Cleaning Service is a Flask-based microservice designed to simulate a robot moving in an office space and cleaning designated places. The service accepts commands via HTTP requests to specify the starting coordinates and movement directions of the robot on a grid-like office environment. After completing its cleaning path, the service stores execution details in a PostgreSQL database and returns the results in JSON format.
 
 ## Environment Used
 
