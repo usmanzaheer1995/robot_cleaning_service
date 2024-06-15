@@ -36,6 +36,7 @@ To run this project locally, ensure you have the following installed:
 3. Create a .env file in the root directory of the project with the following variables:
     ```bash
    DATABASE_URI=postgresql://user:password@localhost:5432/tibber
+   PORT=5000
 
 ## Running the application
 - Run through docker-compose:
