@@ -41,7 +41,7 @@ To run this project locally, ensure you have the following installed:
 ## Running the application
 - Run through docker-compose:
     ```bash
-    docker-compose up -d db
+    docker-compose up --build
 
 The application will be accessible at http://localhost:5000.
 
