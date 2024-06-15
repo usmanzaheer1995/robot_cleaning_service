@@ -18,9 +18,9 @@ def enter_path():
     execution = RobotService.save_execution(len(commands), unique_places_cleaned, duration)
 
     return jsonify({
-        'id': execution['id'],
-        'timestamp': execution['timestamp'],
-        'command_count': execution['command_count'],
-        'result': execution['result'],
-        'duration': execution['duration']
+        'id': execution.id,
+        'timestamp': execution.timestamp.isoformat(),  # Example formatting
+        'command_count': execution.command_count,
+        'result': execution.result,
+        'duration': execution.duration
     }), 201

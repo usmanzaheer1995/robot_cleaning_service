@@ -3,6 +3,7 @@ from flask import Flask
 from src.controllers.RobotController import blueprint
 from unittest.mock import patch
 from datetime import datetime
+from src.models.Executions import Executions
 
 
 @pytest.fixture
@@ -20,15 +21,14 @@ def client(app):
 
 @patch('src.controllers.RobotController.RobotService')
 def test_enter_path(mock_robot_service, client):
-    mock_execution = {
-        'id': 1,
-        'timestamp': datetime(2024, 1, 1).isoformat(),
-        'command_count': 2,
-        'result': 4,
-        'duration': 0.001
-    }
+    mock_execution = Executions(
+        id=1,
+        timestamp=datetime(2024, 1, 1),
+        command_count=2,
+        result=4,
+        duration=0.001
+    )
 
-    mock_robot_service.process_path.return_value = 4
     mock_robot_service.save_execution.return_value = mock_execution
 
     response = client.post('/tibber-developer-test/enter-path', json={
@@ -40,4 +40,9 @@ def test_enter_path(mock_robot_service, client):
     })
 
     assert response.status_code == 201
-    assert response.json == mock_execution
+
+    assert response.json['id'] == mock_execution.id
+    assert response.json['timestamp'] == mock_execution.timestamp.isoformat()
+    assert response.json['command_count'] == mock_execution.command_count
+    assert response.json['result'] == mock_execution.result
+    assert response.json['duration'] == mock_execution.duration
