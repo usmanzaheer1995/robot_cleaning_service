@@ -39,9 +39,11 @@ To run this project locally, ensure you have the following installed:
    PORT=5000
 
 ## Running the application
-- Run through docker-compose:
-    ```bash
-    docker-compose up --build
+
+### Through Docker
+```bash
+docker compose up --build
+```
 
 The application will be accessible at http://localhost:5000.
 
@@ -78,3 +80,5 @@ The application will be accessible at http://localhost:5000.
 To run tests, use pytest:
 ```bash
 pytest
+```
+Ensure you have set up your testing environment with a separate .env file for testing configurations if necessary.
