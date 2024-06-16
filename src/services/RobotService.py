@@ -38,8 +38,3 @@ class RobotService:
         )
         RobotRepository.save(execution)
         return execution
-
-    @staticmethod
-    def calculate_total_duration(commands):
-        total_seconds = sum(command['steps'] for command in commands)
-        return total_seconds
