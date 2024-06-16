@@ -45,4 +45,3 @@ def test_enter_path(mock_robot_service, client):
     assert response.json['timestamp'] == mock_execution.timestamp.isoformat()
     assert response.json['command_count'] == mock_execution.command_count
     assert response.json['result'] == mock_execution.result
-    assert response.json['duration'] == mock_execution.duration

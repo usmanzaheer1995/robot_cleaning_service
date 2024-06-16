@@ -13,18 +13,14 @@ def enter_path():
 
     start_time = time.time()
     unique_places_cleaned = RobotService.process_path(start, commands)
-    duration = time.time() - start_time
+    duration = round(time.time() - start_time, 5)
 
-    execution = RobotService.save_execution(len(commands), unique_places_cleaned, format_duration(duration))
+    execution = RobotService.save_execution(len(commands), unique_places_cleaned, duration)
 
     return jsonify({
         'id': execution.id,
-        'timestamp': execution.timestamp.isoformat(),  # Example formatting
+        'timestamp': execution.timestamp.isoformat(),
         'command_count': execution.command_count,
         'result': execution.result,
-        'duration': format_duration(execution.duration)
+        'duration': duration
     }), 201
-
-
-def format_duration(duration):
-    return f"{duration:.6f}"
