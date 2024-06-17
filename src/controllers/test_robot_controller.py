@@ -1,8 +1,9 @@
 import pytest
 from flask import Flask
-from src.controllers.RobotController import blueprint
 from unittest.mock import patch
 from datetime import datetime
+
+from src.controllers.RobotController import blueprint
 from src.models.Executions import Executions
 
 

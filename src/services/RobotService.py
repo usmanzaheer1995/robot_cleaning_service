@@ -1,6 +1,7 @@
+from datetime import datetime
+
 from src.repositories.RobotRepository import RobotRepository
 from src.models.Executions import Executions
-from datetime import datetime
 
 
 class RobotService:

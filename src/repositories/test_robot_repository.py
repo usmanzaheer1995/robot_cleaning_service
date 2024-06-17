@@ -1,9 +1,10 @@
 import pytest
+from datetime import datetime
+
 from app import create_app
+from src.configs.db import db
 from src.models.Executions import Executions
 from src.repositories.RobotRepository import RobotRepository
-from src.configs.db import db
-from datetime import datetime
 
 
 @pytest.fixture

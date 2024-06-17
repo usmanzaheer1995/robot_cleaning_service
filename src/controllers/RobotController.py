@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify
-from src.services.RobotService import RobotService
 import time
+
+from src.services.RobotService import RobotService
 
 blueprint = Blueprint('robot_controller', __name__)
 
